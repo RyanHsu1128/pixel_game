@@ -12,7 +12,13 @@
 5. **不要**勾選 "Initialize with a README" (因為我們已經有專案了)。
 6. 點擊 **Create repository**。
 
-### 第二步：連接遠端倉庫並推送
+### 第三步：設定 GitHub Pages 來源 (關鍵！解決 404/Error 必做)
+1. 進入 Repository 的 **Settings**。
+2. 左側選單點選 **Pages**。
+3. 在 **Build and deployment** > **Source** 下拉選單中，選擇 **GitHub Actions** (原本可能是 "Deploy from a branch")。
+4. 設定完成後，如果是第一次，您可能需要手動到 **Actions** 頁籤，點選最新的 workflow 並按 **Re-run jobs**，或者再推送一次空 commit 觸發部署。
+
+### 第四步：連接遠端倉庫並推送
 在 VS Code 終端機執行以下指令（將 `RyanHsu1128` 替換為您的 GitHub 帳號，如果您就是 RyanHsu1128 則直接複製）：
 
 ```bash
