@@ -1,0 +1,171 @@
+/* Pixel Art Theme Variables */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* Palette: Neo-Retro */
+  --pixel-bg: #2d1b2e;       /* Deep Purple Background */
+  --pixel-text: #fff0f5;     /* Lavender Blush Text */
+  --pixel-primary: #ff0055;  /* Hot Pink */
+  --pixel-secondary: #00e5ff; /* Cyan */
+  --pixel-accent: #ffea00;   /* Bright Yellow */
+  --pixel-border: #ffffff;   /* White Border */
+  
+  --pixel-font: 'Press Start 2P', cursive;
+  
+  --pixel-spacing: 4px; /* Base unit for pixel grid */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--pixel-font);
+  background-color: var(--pixel-bg);
+  color: var(--pixel-text);
+  line-height: 1.5;
+  image-rendering: pixelated; /* Ensure images stay sharp */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pixel-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pixel-primary);
+  border: 2px solid var(--pixel-bg);
+}
+
+/* Utilities */
+.pixel-border {
+  box-shadow: 
+    -4px 0 0 0 white,
+    4px 0 0 0 white,
+    0 -4px 0 0 white,
+    0 4px 0 0 white;
+  margin: 4px;
+}
+
+.pixel-text-shadow {
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.pixel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Appending Button Styles */
+
+.pixel-btn {
+  font-family: var(--pixel-font);
+  border: 4px solid var(--pixel-border);
+  padding: 12px 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  box-shadow: 
+    -4px 4px 0px 0px rgba(0,0,0,0.5); 
+    /* Simple 3D effect */
+  transition: transform 0.1s, box-shadow 0.1s;
+  image-rendering: pixelated;
+  margin: 8px;
+}
+
+.pixel-btn:active:not(:disabled) {
+  transform: translate(-2px, 2px);
+  box-shadow: -2px 2px 0px 0px rgba(0,0,0,0.5);
+}
+
+.pixel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.pixel-btn-primary {
+  background-color: var(--pixel-primary);
+  color: white;
+}
+
+.pixel-btn-secondary {
+  background-color: var(--pixel-secondary);
+  color: #2d1b2e; /* Dark bg color for contrast */
+}
+
+.pixel-btn-accent {
+  background-color: var(--pixel-accent);
+  color: #2d1b2e;
+}
+
+.pixel-input {
+  font-family: var(--pixel-font);
+  border: 4px solid var(--pixel-border);
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--pixel-text);
+  outline: none;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+.pixel-input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--pixel-secondary);
+}
+
+.pixel-card {
+  border: 4px solid var(--pixel-border);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  margin: 16px auto;
+  position: relative;
+  /* Corner flourish if desired? Keep simple. */
+}
+
+/* Review Section Styles */
+.custom-scrollbar {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.review-item {
+  border: 4px solid;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.review-correct {
+  border-color: #00e676; /* Bright Green */
+}
+
+.review-wrong {
+  border-color: #ff1744; /* Bright Red */
+}
+
+.text-green {
+  color: #00e676;
+}
+
+.text-red {
+  color: #ff1744;
+}
+
+.review-label {
+  display: block;
+  margin-top: 4px;
+}

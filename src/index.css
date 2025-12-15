@@ -1,0 +1,10 @@
+@import './styles/pixel-theme.css';
+
+/* Global Resets or additional global styles can go here */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
